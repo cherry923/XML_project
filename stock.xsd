@@ -20,7 +20,7 @@
         schemaLocation="transaction.xsd" />
 
      <xsd:import namespace="http://www.account.org"
-        schemaLocation="user.xsd" />
+        schemaLocation="account.xsd" />
 
     <xsd:include schemaLocation="market.xsd"/>
 
