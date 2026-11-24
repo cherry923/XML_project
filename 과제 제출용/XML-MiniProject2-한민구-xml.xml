@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE stockManagement SYSTEM "test.dtd">
+<!DOCTYPE stockManagement SYSTEM "XML-MiniProject2-한민구-DTD.dtd">
 
 
 <stockManagement
@@ -9,7 +9,7 @@
     xmlns:acc="http://www.account.org"
     xmlns:frm="http://www.form.org"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.stock.org stock.xsd">
+    xsi:schemaLocation="http://www.stock.org XML-MiniProject2-한민구-main.xsd">
 
     <co:companies>
         <co:company id="C01" market ="KOSPI" sector="반도체">

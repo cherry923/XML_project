@@ -1,0 +1,67 @@
+<!ENTITY kospi "한국거래소 유가증권시장">
+<!ENTITY kosdaq "한국거래소 코스닥시장">
+<!ENTITY nasdaq "미국 나스닥 증권거래소">
+<!ENTITY nyse "미국 뉴욕증권거래소">
+<!ENTITY % ID " id CDATA #REQUIRED">
+
+<!ELEMENT stockManagement (co:companies, markets, sectors, tra:transactions, acc:accounts)>
+
+<!ATTLIST stockManagement
+    xmlns CDATA #IMPLIED
+    xmlns:co CDATA #IMPLIED
+    xmlns:tra CDATA #IMPLIED
+    xmlns:acc CDATA #IMPLIED
+    xmlns:frm CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED
+>
+<!ELEMENT co:companies (co:company*)>
+<!ELEMENT co:company (frm:name, co:ticker, co:financialReports)>
+<!ATTLIST co:company %ID;
+                    market (KOSPI | KOSDAQ | NASDAQ | NYSE) #REQUIRED
+                    sector CDATA #REQUIRED>
+<!ELEMENT co:financialReports (co:financialReport*)>
+<!ATTLIST co:financialReports currency (USD | KRW) #REQUIRED
+                            unit (trillion | billion) #IMPLIED>
+<!ELEMENT co:financialReport (co:revenue, co:operatingIncome, co:netIncome)>
+<!ATTLIST co:financialReport year CDATA #REQUIRED>
+<!ATTLIST co:financialReport quarter (Q1 | Q2 | Q3 | Q4) #REQUIRED>
+<!ATTLIST co:financialReport status (released | unreleased) "released">
+
+<!ELEMENT markets (market*)>
+<!ELEMENT market (frm:name, description)>
+<!ATTLIST market %ID;>
+
+<!ELEMENT sectors (sector*)>
+<!ELEMENT sector (frm:name, stocks)>
+<!ATTLIST sector %ID;>
+<!ATTLIST stock %ID;>
+<!ELEMENT stocks (stock*)>
+<!ELEMENT stock EMPTY>
+
+<!ELEMENT tra:transactions (tra:transaction*)>
+<!ELEMENT tra:transaction (tra:accountID+, tra:companyID+, tra:date+, tra:type+, tra:quantity+, tra:price+)>
+<!ATTLIST tra:transaction %ID;>
+
+<!ELEMENT acc:accounts (acc:account*)>
+<!ATTLIST acc:account %ID;>
+<!ELEMENT acc:account (acc:userID, acc:balance+, acc:transactionHistory*)>
+<!ATTLIST acc:balance currency  (USD | KRW) #REQUIRED>
+<!ELEMENT acc:transactionHistory (acc:transactionID*)>
+
+<!ELEMENT co:revenue (#PCDATA)>
+<!ELEMENT co:operatingIncome (#PCDATA)>
+<!ELEMENT co:netIncome (#PCDATA)>
+<!ELEMENT co:ticker (#PCDATA)>
+
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT tra:companyID (#PCDATA)>
+<!ELEMENT tra:date (#PCDATA)>
+<!ELEMENT tra:type (#PCDATA)>
+<!ELEMENT tra:quantity (#PCDATA)>
+<!ELEMENT tra:price (#PCDATA)>
+<!ELEMENT frm:name (#PCDATA)>
+<!ELEMENT tra:accountID (#PCDATA)>
+<!ELEMENT acc:balance (#PCDATA)>
+<!ELEMENT acc:transactionID (#PCDATA)>
+<!ELEMENT acc:userID (#PCDATA)>

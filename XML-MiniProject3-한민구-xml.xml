@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE stockManagement SYSTEM "test.dtd">
+<!DOCTYPE stockManagement SYSTEM "XML-MiniProject2-한민구-DTD.dtd">
 
 
 <stockManagement
@@ -9,11 +9,11 @@
     xmlns:acc="http://www.account.org"
     xmlns:frm="http://www.form.org"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.stock.org stock.xsd">
+    xsi:schemaLocation="http://www.stock.org XML-MiniProject2-한민구-main.xsd">
 
     <co:companies>
         <co:company id="C01" market ="KOSPI" sector="반도체">
-            <co:name>삼성전자</co:name>
+            <frm:name>삼성전자</frm:name>
             <co:ticker>005930</co:ticker>
             <co:financialReports currency="KRW" unit="trillion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -35,7 +35,7 @@
         </co:company>
 
         <co:company id="C02" market ="KOSPI" sector="반도체">
-            <co:name>SK하이닉스</co:name>
+            <frm:name>SK하이닉스</frm:name>
             <co:ticker>000660</co:ticker>
             <co:financialReports currency="KRW" unit="trillion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -57,7 +57,7 @@
         </co:company>
 
         <co:company id="C03" market ="NASDAQ" sector="정보기술">
-            <co:name>Apple</co:name>
+            <frm:name>Apple</frm:name>
             <co:ticker>AAPL</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -79,7 +79,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C04" market ="NYSE" sector="필수소비재">
-            <co:name>Coca-Cola</co:name>
+            <frm:name>Coca-Cola</frm:name>
             <co:ticker>KO</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -100,7 +100,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C05" market ="NASDAQ" sector="반도체">
-            <co:name>NVIDIA</co:name>
+            <frm:name>NVIDIA</frm:name>
             <co:ticker>NVDA</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -121,7 +121,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C06" market ="NASDAQ" sector="경기소비재">
-            <co:name>Amazon</co:name>
+            <frm:name>Amazon</frm:name>
             <co:ticker>AMZN</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -142,7 +142,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C07" market ="NASDAQ" sector="커뮤니케이션서비스">
-            <co:name>Alphabet Class C</co:name>
+            <frm:name>Alphabet Class C</frm:name>
             <co:ticker>GOOG</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -163,7 +163,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C08" market ="NYSE" sector="금융">
-            <co:name>JPMorgan Chase</co:name>
+            <frm:name>JPMorgan Chase</frm:name>
             <co:ticker>JPM</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -184,7 +184,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C09" market ="NASDAQ" sector="IT">
-            <co:name>Microsoft</co:name>
+            <frm:name>Microsoft</frm:name>
             <co:ticker>MSFT</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -205,7 +205,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C10" market ="NASDAQ" sector="헬스케어">
-            <co:name>Moderna</co:name>
+            <frm:name>Moderna</frm:name>
             <co:ticker>MRNA</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -226,7 +226,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C11" market ="NASDAQ" sector="경기소비재">
-            <co:name>Tesla</co:name>
+            <frm:name>Tesla</frm:name>
             <co:ticker>TSLA</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -247,7 +247,7 @@
                     </co:financialReports>
         </co:company>
         <co:company id="C12" market ="NASDAQ" sector="IT">
-            <co:name>Meta Platforms</co:name>
+            <frm:name>Meta Platforms</frm:name>
             <co:ticker>META</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -268,7 +268,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C13" market ="NASDAQ" sector="반도체">
-            <co:name>Advanced Micro Devices</co:name>
+            <frm:name>Advanced Micro Devices</frm:name>
             <co:ticker>AMD</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -289,7 +289,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C14" market ="NASDAQ" sector="반도체">
-            <co:name>Broadcom</co:name>
+            <frm:name>Broadcom</frm:name>
             <co:ticker>AVGO</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -311,7 +311,7 @@
         </co:company>
 
        <co:company id="C15" market ="NASDAQ" sector="IT">
-            <co:name>Netflix</co:name>
+            <frm:name>Netflix</frm:name>
             <co:ticker>NFLX</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -332,7 +332,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C16" market ="NYSE" sector="금융">
-            <co:name>Visa</co:name>
+            <frm:name>Visa</frm:name>
             <co:ticker>V</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -353,7 +353,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C17" market ="NASDAQ" sector="필수소비재">
-            <co:name>Walmart</co:name>
+            <frm:name>Walmart</frm:name>
             <co:ticker>WMT</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -374,7 +374,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C18" market ="NYSE" sector="헬스케어">
-            <co:name>Eli Lilly</co:name>
+            <frm:name>Eli Lilly</frm:name>
             <co:ticker>LLY</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -395,7 +395,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C19" market ="NYSE" sector="금융">
-            <co:name>Berkshire Hathaway</co:name>
+            <frm:name>Berkshire Hathaway</frm:name>
             <co:ticker>BRK.B</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1" status="unreleased">
@@ -416,7 +416,7 @@
             </co:financialReports>
         </co:company>
         <co:company id="C20" market ="NYSE" sector="에너지">
-            <co:name>Exxon Mobil</co:name>
+            <frm:name>Exxon Mobil</frm:name>
             <co:ticker>XOM</co:ticker>
             <co:financialReports currency="USD" unit="billion">
                 <co:financialReport year="2026" quarter="Q1">
@@ -441,26 +441,26 @@
 
     <markets>
         <market id="M01">
-            <name>KOSPI</name>
+            <frm:name>KOSPI</frm:name>
             <description>&kospi;</description>
         </market>
         <market id="M02">
-            <name>KOSDAQ</name>
+            <frm:name>KOSDAQ</frm:name>
             <description>&kosdaq;</description>
         </market>
         <market id="M03">
-            <name>NASDAQ</name>
+            <frm:name>NASDAQ</frm:name>
             <description>&nasdaq;</description>
         </market>
         <market id="M04">
-            <name>NYSE</name>
+            <frm:name>NYSE</frm:name>
             <description>&nyse;</description>
         </market>
     </markets>
 
     <sectors>
         <sector id="S01">
-            <name>반도체</name>
+            <frm:name>반도체</frm:name>
             <stocks>
                 <stock id="C01" />
                 <stock id="C02" />
@@ -470,7 +470,7 @@
             </stocks>
         </sector>
         <sector id="S02">
-            <name>IT</name>
+            <frm:name>IT</frm:name>
             <stocks>
                 <stock id="C09" />
                 <stock id="C12" />
@@ -478,7 +478,7 @@
             </stocks>
         </sector>
         <sector id="S03">
-            <name>금융</name>
+            <frm:name>금융</frm:name>
             <stocks>
                 <stock id="C08" />
                 <stock id="C16" />
@@ -486,40 +486,40 @@
             </stocks>
         </sector>
         <sector id="S04">
-            <name>에너지</name>
+            <frm:name>에너지</frm:name>
             <stocks>
                 <stock id="C20" />
             </stocks>
         </sector>
         <sector id="S05">
-            <name>필수소비재</name>
+            <frm:name>필수소비재</frm:name>
             <stocks>
                 <stock id="C04" />
                 <stock id="C17" />
             </stocks>
         </sector>
         <sector id="S06">
-            <name>경기소비재</name>
+            <frm:name>경기소비재</frm:name>
             <stocks>
                 <stock id="C06" />
                 <stock id="C11" />
             </stocks>
         </sector>
         <sector id="S07">
-            <name>헬스케어</name>
+            <frm:name>헬스케어</frm:name>
             <stocks>
                 <stock id="C10" />
                 <stock id="C18" />
             </stocks>
         </sector>
         <sector id="S08">
-            <name>커뮤니케이션서비스</name>
+            <frm:name>커뮤니케이션서비스</frm:name>
             <stocks>
                 <stock id="C07" />
             </stocks>
         </sector>
         <sector id="S09">
-            <name>정보기술</name>
+            <frm:name>정보기술</frm:name>
             <stocks>
                 <stock id="C03" />
             </stocks>
