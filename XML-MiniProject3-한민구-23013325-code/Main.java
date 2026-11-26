@@ -20,10 +20,18 @@ public class Main {
             System.exit(1);
         }
         uri = argv[0];
+        XMLvalidation_DTD XML_DTD = new XMLvalidation_DTD();
+           if (argv.length == 2) {
+            if (argv[1].equals("-v")) {
+                XML_DTD.setValidate(true);
+            }
+        }
+        
         XMLManager xmlManager = new XMLManager();
         Scanner sc = new Scanner(System.in);
 
         while (true) {
+            XML_DTD.validate(uri);
             System.out.println("1.load 2.make 3.find 4.save 5.traverse 6.insert 7.update 8.delete 9.exit");
             System.out.println("메뉴를 선택해주세요:");
             String selectedMenu = sc.nextLine();
@@ -46,6 +54,8 @@ public class Main {
                     String rootName = sc.nextLine();
 
                     xmlManager.make(rootName);
+                    System.out.println("트리 생성가 생성되었습니다.");
+
                     break;
 
                 case "3":
@@ -88,7 +98,7 @@ public class Main {
                         System.out.println("검색된 노드가 없습니다.");
                         break;
                     }
-                    System.out.println("몇번째 노드의 추가하시겠습니까?");
+                    System.out.println("몇번째 노드에 추가하시겠습니까?");
                     int nodeIdx = Integer.parseInt(sc.nextLine());
 
                     System.out.println("추가할 타입을 입력해주세요. 1.ELEMENT 2.ATTRIBUTE 3.TEXT 4.COMMENT");
@@ -97,13 +107,16 @@ public class Main {
                     System.out.println("추가할 노드의 이름을 입력해주세요");
                     nodeName = sc.nextLine();
 
+                    System.out.println("추가할 노드의 값을 입력해주세요.");
+                    String nodeValue = sc.nextLine();
+
                     List<Node> selectedNodes = xmlManager.getSelectedNodes();
                     Node selectedNode = selectedNodes.get(nodeIdx - 1);
 
                     NodeList children = selectedNode.getChildNodes();
                     if (children.getLength() == 0) {
                         System.out.println("해당 부모노드의 자식이 존재하지않아 첫 번째 자식으로 추가합니다.");
-                        xmlManager.insert(parentNodeName, nodeIdx, type, nodeName, 0);
+                        xmlManager.insert(parentNodeName, nodeIdx, type, nodeName, 0, nodeValue);
                     } else {
                         for (int i = 0; i < children.getLength(); i++) {
                             Node child = children.item(i);
@@ -113,7 +126,7 @@ public class Main {
                         System.out.println("위치를 입력해주세요(입력된 위치의 앞부분에 추가됩니다.)");
                         select = Integer.parseInt(sc.nextLine());
 
-                        xmlManager.insert(parentNodeName, nodeIdx, type, nodeName, select - 1);
+                        xmlManager.insert(parentNodeName, nodeIdx, type, nodeName, select - 1, nodeValue);
                     }
                     break;
                 case "7":

@@ -34,7 +34,7 @@ public class XMLManager {
             doc = builder.parse(uri);
             root = doc.getDocumentElement();
 
-            selectedNodes.clear();
+            //selectedNodes.clear();
 
             System.out.println("load성공 하였습니다.");
 
@@ -341,14 +341,14 @@ public class XMLManager {
         return index;
     }
 
-    Node getRoot() {
+    public Node getRoot() {
         if (doc == null) {
             return null;
         }
         return doc.getDocumentElement();
     }
 
-    List<Node> getSelectedNodes() {
+    public List<Node> getSelectedNodes() {
         return selectedNodes;
     }
 

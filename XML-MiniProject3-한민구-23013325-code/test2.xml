@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE stockManagement SYSTEM "test.dtd">
+<stockManagement xmlns:acc="http://www.account.org" xmlns:co="http://www.company.org" xmlns:frm="http://www.form.org" xmlns:tra="http://www.transaction.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.stock.org stock.xsd">
+    <markets>
+        <market id="M01">
+            <frm:name>KOSPI</frm:name>
+            <description>한국거래소 유가증권시장</description>
+        </market>
+        <market id="M02">
+            <frm:name>KOSDAQ</frm:name>
+            <description>한국거래소 코스닥시장</description>
+        </market>
+        <market id="M03">
+            <frm:name>NASDAQ</frm:name>
+            <description>미국 나스닥 증권거래소</description>
+        </market>
+        <market id="M04">
+            <frm:name>NYSE</frm:name>
+            <description>미국 뉴욕증권거래소</description>
+        </market>
+    </markets>
+    <sectors>
+        <sector id="S01">
+            <frm:name>반도체</frm:name>
+            <stocks>
+                <stock id="C01"/>
+                <stock id="C02"/>
+                <stock id="C05"/>
+                <stock id="C13"/>
+                <stock id="C14"/>
+            </stocks>
+        </sector>
+        <sector id="S02">
+            <frm:name>IT</frm:name>
+            <stocks>
+                <stock id="C09"/>
+                <stock id="C12"/>
+                <stock id="C15"/>
+            </stocks>
+        </sector>
+        <sector id="S03">
+            <frm:name>금융</frm:name>
+            <stocks>
+                <stock id="C08"/>
+                <stock id="C16"/>
+                <stock id="C19"/>
+            </stocks>
+        </sector>
+        <sector id="S04">
+            <frm:name>에너지</frm:name>
+            <stocks>
+                <stock id="C20"/>
+            </stocks>
+        </sector>
+        <sector id="S05">
+            <frm:name>필수소비재</frm:name>
+            <stocks>
+                <stock id="C04"/>
+                <stock id="C17"/>
+            </stocks>
+        </sector>
+        <sector id="S06">
+            <frm:name>경기소비재</frm:name>
+            <stocks>
+                <stock id="C06"/>
+                <stock id="C11"/>
+            </stocks>
+        </sector>
+        <sector id="S07">
+            <frm:name>헬스케어</frm:name>
+            <stocks>
+                <stock id="C10"/>
+                <stock id="C18"/>
+            </stocks>
+        </sector>
+        <sector id="S08">
+            <frm:name>커뮤니케이션서비스</frm:name>
+            <stocks>
+                <stock id="C07"/>
+            </stocks>
+        </sector>
+        <sector id="S09">
+            <frm:name>정보기술</frm:name>
+            <stocks>
+                <stock id="C03"/>
+            </stocks>
+        </sector>
+    </sectors>
+    <tra:transactions>
+        <tra:transaction id="T01">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C01</tra:companyID>
+            <tra:date>2025-01-15</tra:date>
+            <tra:type>buy</tra:type>
+            <tra:quantity>100</tra:quantity>
+            <tra:price>70000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T02">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C02</tra:companyID>
+            <tra:date>2025-01-20</tra:date>
+            <tra:type>sell</tra:type>
+            <tra:quantity>50</tra:quantity>
+            <tra:price>120000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T03">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C03</tra:companyID>
+            <tra:date>2025-02-05</tra:date>
+            <tra:type>buy</tra:type>
+            <tra:quantity>200</tra:quantity>
+            <tra:price>150000</tra:price>
+        </tra:transaction>
+        <tra:transaction id="T04">
+            <tra:accountID>A01</tra:accountID>
+            <tra:companyID>C04</tra:companyID>
+            <tra:date>2025-02-10</tra:date>
+            <tra:type>sell</tra:type>
+            <tra:quantity>80</tra:quantity>
+            <tra:price>60000</tra:price>
+        </tra:transaction>
+    </tra:transactions>
+    <acc:accounts>
+        <acc:account id="A01">
+            <acc:userID>user1</acc:userID>
+            <acc:balance currency="KRW">10000000</acc:balance>
+            <acc:balance currency="USD">1000000</acc:balance>
+            <acc:transactionHistory>
+                <acc:transactionID>T01</acc:transactionID>
+                <acc:transactionID>T02</acc:transactionID>
+            </acc:transactionHistory>
+        </acc:account>
+        <acc:account id="A02">
+            <acc:userID>user2</acc:userID>
+            <acc:balance currency="KRW">20000000</acc:balance>
+            <acc:balance currency="USD">2000000</acc:balance>
+            <acc:transactionHistory>
+                <acc:transactionID>T03</acc:transactionID>
+                <acc:transactionID>T04</acc:transactionID>
+            </acc:transactionHistory>
+        </acc:account>
+    </acc:accounts>
+</stockManagement>
